@@ -53,6 +53,10 @@ export const Menu = () => {
           path: "/genderTypes",
           title: "resources.genderTypes.name",
         },
+        {
+          path: "/links",
+          title: "resources.links.name",
+        },
       ],
     },
   ];
