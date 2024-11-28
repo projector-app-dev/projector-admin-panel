@@ -3,7 +3,7 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
-import { DateField, FileField, useFieldValue } from "react-admin";
+import { DateField, FieldProps, FileField, useFieldValue } from "react-admin";
 
 export const CustomFileField = (props: FieldProps) => {
   const value = useFieldValue(props);

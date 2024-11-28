@@ -58,6 +58,7 @@ export const ua: TranslationMessages = {
       fields: {
         type: "Тип",
         createdate: "Відправлено",
+        taken: "Створено",
         userId: "ПІБ",
         description: "Опис",
         media: "Медіа",
