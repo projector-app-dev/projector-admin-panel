@@ -1,8 +1,4 @@
-import {
-  Card,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, Typography } from "@mui/material";
 import { DateField, FieldProps, FileField, useFieldValue } from "react-admin";
 
 export const CustomFileField = (props: FieldProps) => {
@@ -21,14 +17,14 @@ export const CustomFileField = (props: FieldProps) => {
               emptyText="ra.page.not_found"
             />
             <CardContent>
-              {item.createdate && (
+              {item.createdate && item.createdate != "null" ? (
                 <DateField
                   source={`attachment[${index}].createdate`}
                   locales="uk"
                   showTime
                   transform={(value) => new Date(value.replace(/at(?!\w)/, ""))}
                 />
-              )}
+              ) : null}
               <Typography variant="body2" sx={{ color: "text.secondary" }}>
                 {item.location}
               </Typography>
@@ -41,8 +37,8 @@ export const CustomFileField = (props: FieldProps) => {
 };
 
 export interface CustomFileFieldProp {
-    src: string;
-    createdate: string;
-    title: string;
-    location: string;
-  }
+  src: string;
+  createdate: string;
+  title: string;
+  location: string;
+}
