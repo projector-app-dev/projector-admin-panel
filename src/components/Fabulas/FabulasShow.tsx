@@ -2,8 +2,6 @@ import { Box, SxProps, Theme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import {
   EmailField,
-  FileField,
-  ImageField,
   ReferenceField,
   ShowBase,
   ShowProps,
@@ -12,6 +10,8 @@ import {
   TabbedShowLayout,
   TextField,
 } from "react-admin";
+import { CustomImageField } from "./fields/CustomImageField";
+import { CustomFileField } from "./fields/CustomFileField";
 
 export const FabulasShow = (props: ShowProps) => {
   const boxStyle: SxProps = {
@@ -51,26 +51,14 @@ export const FabulasShow = (props: ShowProps) => {
           </Box>
         </Grid>
         <Grid size="grow">
-          <Box sx={boxStyle}>
+          <Box sx={boxStyle} >
             <TabbedShowLayout>
               <Tab label="resources.fabulas.fields.description">
                 <TextField source="description" label={false} />
               </Tab>
-              <Tab label="resources.fabulas.fields.media">
-                <TextField source="location" emptyText="ra.page.not_found" />
-                <ImageField
-                  source="picture"
-                  src="src"
-                  title="title"
-                  emptyText="ra.page.not_found"
-                />
-                <FileField
-                  source="attachment"
-                  src="src"
-                  title="title"
-                  rel="noopener noreferrer"
-                  emptyText="ra.page.not_found"
-                />
+              <Tab label="resources.fabulas.fields.media" >
+                <CustomImageField source="picture" />
+                <CustomFileField source="attachment" />
               </Tab>
             </TabbedShowLayout>
           </Box>

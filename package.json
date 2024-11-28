@@ -1,6 +1,7 @@
 {
   "private": true,
   "type": "module",
+  "homepage": "https://projector-app-dev.github.io/projector-admin-panel",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,13 +9,19 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
     "format": "prettier --write ./src",
-    "test": "vitest"
+    "test": "vitest",
+    "deploy": "gh-pages -d dist",
+    "start": "react-scripts start",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.6",
     "firebase": "^9.23.0",
+    "fslightbox-react": "^1.7.6",
+    "gh-pages": "^6.2.0",
     "ra-input-rich-text": "^5.3.3",
     "ra-language-ukrainian": "^4.0.0",
     "ra-ui-materialui": "5.0.0",
