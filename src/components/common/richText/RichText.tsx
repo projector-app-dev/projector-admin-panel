@@ -5,6 +5,7 @@ import {
 	ClearButtons,
     RichTextInputProps,
     AlignmentButtons,
+	LinkButtons,
 } from 'ra-input-rich-text';
 
 export const CustomRichTextInput = (props: RichTextInputProps ) => (
@@ -14,6 +15,7 @@ export const CustomRichTextInput = (props: RichTextInputProps ) => (
 				<FormatButtons size="large" />
                 <AlignmentButtons size="large" />
                 <ClearButtons size="large" />
+				<LinkButtons size="large" />
 			</RichTextInputToolbar>
 		}
 		{...props}

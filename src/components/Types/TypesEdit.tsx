@@ -2,6 +2,8 @@ import {
   DeleteWithConfirmButton,
   Edit,
   EditProps,
+  NumberInput,
+  required,
   SaveButton,
   SimpleForm,
   TextInput,
@@ -20,6 +22,7 @@ export const TypesEdit = (props: EditProps) => {
     <Edit {...props} redirect="list">
       <SimpleForm toolbar={<EditToolbar />}>
         <TextInput source="title" fullWidth={true} />
+        <NumberInput source="order" validate={required()} />
       </SimpleForm>
     </Edit>
   );

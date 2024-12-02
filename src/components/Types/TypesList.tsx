@@ -4,6 +4,7 @@ import {
   EditButton,
   List,
   ListProps,
+  NumberField,
   TextField,
   TopToolbar,
 } from "react-admin";
@@ -20,7 +21,8 @@ export const TypesList = (props: ListProps) => {
       <Datagrid bulkActionButtons={false} sx={{'& .RaDatagrid-rowCell:has(.edit-button)': {
         textAlign: "end"
       }}}>
-        <TextField source="title" />
+        <NumberField source="order" />
+        <TextField source="title"/>
         <>
           <EditButton className="edit-button"/>
         </>
