@@ -5,6 +5,7 @@ import {
   EditButton,
   List,
   ListProps,
+  NumberField,
   TextField,
   TopToolbar,
 } from "react-admin";
@@ -19,6 +20,7 @@ export const FaqList = (props: ListProps) => {
   return (
     <List actions={<ListActions />} {...props}>
       <Datagrid>
+        <NumberField source="order" />
         <TextField source="header" />
         <DateField source="createdate" locales="uk" />
         <DateField source="lastupdate" locales="uk" />

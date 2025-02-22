@@ -8,7 +8,7 @@ export default defineConfig({
     server: {
         host: true,
     },
-    base: './',
+    base: '/projector-admin-panel/',
     test: {
         globals: true,
         environment: 'jsdom'
